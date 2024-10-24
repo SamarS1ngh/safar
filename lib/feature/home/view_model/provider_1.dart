@@ -1,6 +1,6 @@
 import 'dart:developer';
-import 'package:feature_based/data/remote/network/base_api_service.dart';
-import 'package:feature_based/data/remote/network/network_api_service.dart';
+import 'package:safar/data/remote/network/base_api_service.dart';
+import 'package:safar/data/remote/network/network_api_service.dart';
 import 'package:flutter/material.dart';
 
 class Provider1 extends ChangeNotifier {

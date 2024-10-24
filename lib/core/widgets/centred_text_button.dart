@@ -31,7 +31,7 @@ class CenteredTextButton extends StatelessWidget {
       key: key,
       label: label,
       onTap: onTap,
-      color: AppColorsTheme.dark().bgInput,
+      color: AppColorsTheme.light().primary,
       height: height ?? 50,
       width: width ?? 300,
       radius: radius ?? 7,

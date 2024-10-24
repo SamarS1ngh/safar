@@ -1,6 +1,6 @@
 {
-    "name": "feature_based",
-    "short_name": "feature_based",
+    "name": "safar",
+    "short_name": "safar",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
