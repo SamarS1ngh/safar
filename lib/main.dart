@@ -3,9 +3,11 @@ import 'package:safar/Routes/app_router_config.dart';
 import 'package:safar/core/utils/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:safar/feature/home/view_model/bloc.dart';
 import 'package:sizer/sizer.dart';
 
 import 'data/local/local_storage_service.dart';
+import 'feature/stories/viewmodel/bloc.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +16,11 @@ Future<void> main() async {
     DeviceOrientation.portraitDown,
   ]);
   await LocalStorageService.init();
-  runApp(const MyApp());
+
+  runApp(MultiBlocProvider(providers: [
+    BlocProvider<HomePageBloc>(create: (context) => HomePageBloc()),
+    BlocProvider<StoryBloc>(create: (context) => StoryBloc(context)),
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -22,6 +28,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // LocalStorageService.clearAll();
     return Sizer(builder: (context, orientation, screenType) {
       return MaterialApp.router(
         debugShowCheckedModeBanner: false,

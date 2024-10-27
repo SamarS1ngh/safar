@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColorsTheme extends ThemeExtension<AppColorsTheme> {
   //reference colors
-  static final Color _lightOrange = Colors.orange.shade100;
+  static final Color _lightOrange = Colors.orange.shade50;
   static const Color _red = Color(0xFFAF0121);
   static const Color _green = Color(0xFF00F318);
   static const Color _orange = Color.fromARGB(255, 255, 153, 0);
